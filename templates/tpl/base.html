@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XXX网站</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    {# 第一个内容，菜单 #}
+    {% block menu %}
+       <div style="background-color: aqua;">
+            <ul style="list-style: none; display: -webkit-inline-box ">
+                <li>{{ menu }} | </li>
+                <li class="font-20">下载 | </li>
+                <li>文档 | </li>
+                <li>捐赠</li>
+            </ul>
+        </div>
+    {% endblock %}
+
+    {# 内容块 #}
+    {% block content %}
+        <div id="content">
+            <h1>这是内容填充</h1>
+        </div>
+    {% endblock %}
+
+    {# 底部块 #}
+    {% block footer %}
+        <div id="footer" style="background-color: antiquewhite">
+            <p>这是网站底部。。</p>
+        </div>
+    {% endblock %}
+</body>
+</html>

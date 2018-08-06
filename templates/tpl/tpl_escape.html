@@ -1,0 +1,15 @@
+{% extends 'tpl/base.html' %}
+
+{% block content %}
+    {{ msg|safe }}
+    {{ '2&gt;1'|escape }}<br>
+    {{ '2&lt;1'|escape }}<br>
+    {{ '&#39;1111&#39;'|escape }}<br>
+    {{ '&quot;1111&quot;'|escape }}<br>
+    {{ data|default:"&lt;h1&gt;Hello&lt;/h1&gt;" }}
+    {% autoescape off %}
+        {{ msg }}
+    {% endautoescape %}
+
+
+{% endblock %}

@@ -1,0 +1,8 @@
+<h1>这是欢迎页面！</h1>
+<h2>{{ view }}</h2>
+<ul>
+    {% for user in users %}
+        <li>{{user.userName}} -- {{ user.password }}</li>
+    {% endfor %}
+    
+</ul>

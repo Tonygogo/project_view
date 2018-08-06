@@ -1,0 +1,10 @@
+{% extends 'tpl/base.html' %}
+
+{% block content %}
+        <div>debug: {{ debug }}</div>
+        <div>request: {{ request.method }}/{{ request.path }}/{{ request.session.userName }}/{{ request.COOKIES }}</div>
+        <div>auth: {{ auth }}</div>
+        <div>message: {% for message in messages %}
+        {{ message }}
+    {% endfor %}</div>
+{% endblock %}
